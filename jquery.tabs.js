@@ -23,8 +23,13 @@
 		return this.each(function(){
 
 			/*plugin code starts here*/
+
+			//extracting parent
 			var parent = $(this);
 			console.log(parent);
+
+			//setting css property of 'div.clear'
+			$(this).find('div.clear').css('clear','both');
 
 			// creating navigation system for the tabs
 			var nav_div = document.createElement('div');
@@ -52,6 +57,10 @@
 			nav_div.appendChild(nav_ul);
 			parent.prepend(nav_div);
 
+			// setting css properties of navigation
+			$('ul#nav').css('list-style','none');
+			$('ul#nav li').css('float','left');
+
 			//revealing the navigation links
 			var nav_ul = parent.find('ul#nav');
 			nav_ul.css('display','block');
@@ -67,7 +76,7 @@
 
 			//the click event of nav links(switching between tabs)
 			var nav_link = $('a.nav_link');
-			nav_link.click(function(){
+			nav_link.click(function(e){
 				var id = this.getAttribute('data-for');
 				
 				// first remove 'current' class,if any
@@ -81,6 +90,8 @@
 
 				// adding class 'current' to current link
 				$(this).addClass('current');
+
+				e.preventDefault();
 			});
 
 			//manual clicking of first item
