@@ -1,0 +1,45 @@
+<html>
+<head>
+	<script src="/home/rajat/apps/final/boo/static/js/jquery.js"></script>
+	<script src="jquery.tabs.js"></script>
+	<style>
+		ul#nav{
+			list-style: none;
+			display: none;
+		}
+		ul#nav li{
+			float: left;
+			margin-left: 5px;
+		}
+		div.clear{
+			clear: both;
+		}
+	</style>
+	<script>
+		$(document).ready(function(){
+			$('div#tabs_container').tabs();
+		});
+	</script>
+</head>
+<body>
+	<div id="tabs_container">
+		<div class="clear"></div>
+		<div id="panes_container">
+			<div id="child1">
+				<h1>heading of Tab 1-Kill</h1>
+				<p>This rule set also starts to make the items a little more tab-like by applying a border to the top, right, and left sides. The margin property here zeroes the margin on all sides except the right, because we're going to space the tabs out a bit.
+				Now we can make things a little tidier by padding out the a elements a bit (adjusting this for the a element, rather than for the li elements, has the advantage of making the whole width of the tab clickable):</p>
+			</div>
+			<div id="child2">
+				<h1>heading of Tab 2</h1>
+				<p>But there's one essential thing missing. As it is, the tabs are just sitting across the top of the content box, all looking pretty much the same. What we need to do is make the "active" tab - the one that relates to the page we're on, look as if it's part of the content box, like a tab on the side of a dividing card.
+				Because vertical padding in inline boxes doesn't actually push anything out around it, we can simply do this:</p>
+			</div>
+			<div id="child3">
+				<h1>heading of Tab 3</h1>
+				<p>So far, this technique is great for basic tabs. Colors, border colors, text decoration, etc. can all be changed to suit. When it comes to padding, though, things go awry. For the very same reason that the "selected" tab works by spilling over onto the content box, padding cannot be applied to the initial tab states. They just wouldn't behave.</p>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
