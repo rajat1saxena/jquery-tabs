@@ -1,0 +1,15 @@
+INTRODUCTION
+--------------------
+This is a jQuery plugin to add 'tabs' functionality to your web applications.
+
+HOW TO USE
+--------------------
+Simply write '<your_container>.tabs();' inside '<script>' tag after importing the plugin file into your markup file.For more details look at the attached 'tabs.html' file.
+
+LICENSE
+--------------------
+All the code is licensed under GNUv3 license.
+
+CONTACT
+--------------------
+Rajat Saxena(rajat.saxena.work@gmail.com)
